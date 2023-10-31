@@ -16,7 +16,7 @@ problem = NLP_nonlinear(C)
 x = np.ones(2)
 y, J = problem.evaluate(x)
 value = y[0]
-solution = 1. / 8.
+solution = 1. / np.sqrt(8.)
 
 
 print("found solution", value)
