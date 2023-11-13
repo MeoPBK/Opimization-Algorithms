@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1035788e-42d5-42ae-8ccc-82d77f830ee0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/assignments/a1_gradient_descent/solution.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/a1_gradient_descent/solution.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignments/a1_gradient_descent/trial.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/assignments/a1_nonlinear_function/solution.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/a1_nonlinear_function/solution.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignments/a1_quadratic_function/solution.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/a1_quadratic_function/solution.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,8 +24,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assignments/a1_nonlinear_function/solution.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="811">
-              <caret line="69" column="95" selection-start-line="69" selection-start-column="95" selection-end-line="69" selection-end-column="95" />
+            <state relative-caret-position="318">
+              <caret line="40" column="75" selection-start-line="40" selection-start-column="75" selection-end-line="40" selection-end-column="75" />
             </state>
           </provider>
         </entry>
@@ -64,7 +61,7 @@
         <entry file="file://$PROJECT_DIR$/assignments/a1_quadratic_function/play.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -161,6 +158,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -380,7 +378,7 @@
     <entry file="file://$PROJECT_DIR$/assignments/a1_quadratic_function/play.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
@@ -393,8 +391,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assignments/a1_nonlinear_function/solution.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="811">
-          <caret line="69" column="95" selection-start-line="69" selection-start-column="95" selection-end-line="69" selection-end-column="95" />
+        <state relative-caret-position="318">
+          <caret line="40" column="75" selection-start-line="40" selection-start-column="75" selection-end-line="40" selection-end-column="75" />
         </state>
       </provider>
     </entry>
