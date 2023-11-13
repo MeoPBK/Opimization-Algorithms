@@ -37,12 +37,8 @@ class NLP_xCCx(NLP):
         """
 
         # Add code to compute the feature (cost) and the Jacobian
-        A = np.dot(self.C.T,self.C)
-        y0 = np.dot(x.T,np.dot(A,x))
-        y = [y0]
-        #y = np.atleast_1d(y_0,)
-        print(type(y))
-        J = np.dot(x.T,(A+A.T))
+        y = (x.T @ self.C.T @ self.C @ x).reshape((1,))
+        J = (2 * x.T @ self.C.T @ self.C).reshape((1, -1))
 
 
         return y, J
@@ -71,9 +67,8 @@ class NLP_xCCx(NLP):
         """
 
         # Add code to compute the Hessian
-        A = np.dot(self.C.T, self.C)
-        print("A:",type(A))
-        H = (A+A.T)
+        A = self.C.T @ self.C
+        H = (A + A.T)
 
 
         return H

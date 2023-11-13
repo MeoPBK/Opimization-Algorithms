@@ -100,7 +100,7 @@ def solve(nlp: NLP):
      #   print("i:",i)
      #   print("alpha:",k)
      #   print("x:",x)
-        print("phi(x):",type(phi))
+     #  print("phi(x):",type(phi))
      #   print("J:",J)
     return x
 

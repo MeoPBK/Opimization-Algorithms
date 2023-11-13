@@ -37,8 +37,8 @@ class NLP_nonlinear(NLP):
         """
 
         # Add code to compute the feature (cost) and the Jacobian
-        y = 1/np.linalg.norm(self.C*x)^2  # € R
-        J = -self.C.T*self.C*x/np.linalg.norm(self.C*x)^3 # € R^n
+        y = 1/np.linalg.norm(self.C@x)^2  # € R
+        J = -self.C.T @ self.C*x/np.linalg.norm(self.C@x)^3 # € R^n
 
         return y, J
 
@@ -66,8 +66,8 @@ class NLP_nonlinear(NLP):
         """
         # add code to compute the Hessian matrix
         n = getDimension(self.C)
-        A = self.C.T*self.C
-        H = A*(3*x*x.T*A.T*A/np.linalg.norm(self.C * x)^2-np.ones(n,n))/np.linalg.norm(self.C * x)^3
+        A = self.C.T@self.C
+        H = A@(3*x@x.T@A.T@A/np.linalg.norm(self.C @ x)^2-np.ones(n,n))/np.linalg.norm(self.C @ x)^3
 
 
         return H
