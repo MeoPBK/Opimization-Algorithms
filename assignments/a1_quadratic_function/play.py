@@ -16,7 +16,7 @@ import unittest
 C = np.ones((2, 2))
 problem = NLP_xCCx(C)
 x = np.ones(2)
-y, J = problem.evaluate(x)
+y, J = problem.evaluate(x)[0][0]
 value = y[0]
 solution = 8
 

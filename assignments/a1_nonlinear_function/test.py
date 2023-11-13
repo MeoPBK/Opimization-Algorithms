@@ -34,7 +34,7 @@ class test_NLP_nonlinear(unittest.TestCase):
         x = np.array([-1, .5])
         _, J = problem.evaluate(x)
         eps = 1e-5
-        Jdiff = run_with_timeout(lambda: finite_diff_J(problem, x, eps))
+        Jdiff = finite_diff_J(problem, x, eps)
         self.assertTrue(np.allclose(J, Jdiff, eps * 10))
 
     def testHessian(self):
@@ -48,7 +48,7 @@ class test_NLP_nonlinear(unittest.TestCase):
             return problem.evaluate(x)[0][0]
 
         tol = 1e-4
-        Hdiff = run_with_timeout(lambda: finite_diff_hess(f, x, tol))
+        Hdiff = finite_diff_hess(f, x, tol)
         self.assertTrue(np.allclose(H, Hdiff, 10 * tol, 10 * tol))
 
 

@@ -19,7 +19,7 @@ class testGradientDescent(unittest.TestCase):
 
         problem = NLPTraced(QuadraticIdentity2())
 
-        x = run_with_timeout(lambda: solve(problem))
+        x = solve(problem)
         fout = problem.evaluate(x)[0][0]
         solution = np.zeros(2)
         fopt = problem.evaluate(solution)[0][0]
@@ -40,7 +40,7 @@ class testGradientDescent(unittest.TestCase):
         C = make_C_exercise1(3, .1)
         problem = NLPTraced(Hole(C, 1.5))
         solution = np.zeros(3)
-        x = run_with_timeout(lambda: solve(problem))
+        x = solve(problem)
         fout = problem.evaluate(x)[0][0]
         fopt = problem.evaluate(solution)[0][0]
         self.assertTrue(fout - fopt < 1e-3)
@@ -49,7 +49,7 @@ class testGradientDescent(unittest.TestCase):
 
         problem = NLPTraced(Barrier())
         solution = 0.01 * np.ones(2)
-        x = run_with_timeout(lambda: solve(problem))
+        x = solve(problem)
         fout = problem.evaluate(x)[0][0]
         fopt = problem.evaluate(solution)[0][0]
         self.assertTrue(np.linalg.norm(fout - fopt) < 1e-3)

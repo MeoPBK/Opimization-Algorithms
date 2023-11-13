@@ -24,6 +24,7 @@ class test_NLP_xCCx(unittest.TestCase):
         x = np.ones(2)
         value = problem.evaluate(x)[0][0]
         solution = 8
+
         self.assertAlmostEqual(value, solution)
 
     def testJacobian(self):
