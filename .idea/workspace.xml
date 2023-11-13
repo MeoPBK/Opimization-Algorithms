@@ -24,8 +24,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assignments/a1_nonlinear_function/solution.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="40" column="75" selection-start-line="40" selection-start-column="75" selection-end-line="40" selection-end-column="75" />
+            <state relative-caret-position="371">
+              <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assignments/a1_nonlinear_function/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -173,7 +182,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.play (1)">
+  <component name="RunManager" selected="Python tests.pytest in test.py (2)">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="optimization_algorithms_w23" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -246,6 +255,21 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest in test.py (2)" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="optimization_algorithms_w23" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/assignments/a1_nonlinear_function" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/assignments/a1_nonlinear_function/test.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="pytest in test.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="optimization_algorithms_w23" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -266,9 +290,11 @@
       <item itemvalue="Python.play (1)" />
       <item itemvalue="Python tests.pytest in test.py" />
       <item itemvalue="Python tests.pytest in test.py (1)" />
+      <item itemvalue="Python tests.pytest in test.py (2)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest in test.py (2)" />
         <item itemvalue="Python.play (1)" />
         <item itemvalue="Python tests.pytest in test.py (1)" />
         <item itemvalue="Python tests.pytest in test.py" />
@@ -298,6 +324,9 @@
     </history-entry>
     <history-entry file="pytest_in_test_py_(1) - 2023.11.13 at 23h 12m 33s.xml">
       <configuration name="pytest in test.py (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_py_(2) - 2023.11.13 at 23h 29m 34s.xml">
+      <configuration name="pytest in test.py (2)" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -389,10 +418,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assignments/a1_nonlinear_function/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assignments/a1_nonlinear_function/solution.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="40" column="75" selection-start-line="40" selection-start-column="75" selection-end-line="40" selection-end-column="75" />
+        <state relative-caret-position="371">
+          <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
         </state>
       </provider>
     </entry>
