@@ -68,7 +68,7 @@ class NLP_nonlinear(NLP):
         # add code to compute the Hessian matrix
         n = getDimension(self.C)
         A = self.C.T@self.C
-        H = A@(3*x@x.T@A.T@A/np.linalg.norm(self.C @ x)^2-np.ones(n,n))/np.linalg.norm(self.C @ x)^3
+        H = A@(3*x@x.T@A.T@A/np.linalg.norm(self.C @ x)**2-np.ones(n,n))/np.linalg.norm(self.C @ x)**3
 
 
         return H

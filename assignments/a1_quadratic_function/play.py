@@ -18,8 +18,7 @@ from optalg.interface.nlp_timeout import NLPTimeout
 C = np.ones((2, 2))
 problem = NLP_xCCx(C)
 x = np.ones(2)
-y, J = problem.evaluate(x)
-value = y[0]
+value = problem.evaluate(x)[0][0]
 solution = 8
 
 C = np.ones((2, 2))

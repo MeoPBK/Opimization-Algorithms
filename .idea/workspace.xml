@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1035788e-42d5-42ae-8ccc-82d77f830ee0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignments/a1_nonlinear_function/play.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/a1_nonlinear_function/play.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignments/a1_nonlinear_function/solution.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/a1_nonlinear_function/solution.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignments/a1_quadratic_function/play.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/a1_quadratic_function/play.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignments/a1_quadratic_function/solution.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/a1_quadratic_function/solution.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignments/a1_quadratic_function/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/a1_quadratic_function/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,8 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assignments/a1_nonlinear_function/solution.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+            <state relative-caret-position="134">
+              <caret line="70" column="57" selection-start-line="70" selection-start-column="57" selection-end-line="70" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -38,8 +34,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assignments/a1_nonlinear_function/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+            <state relative-caret-position="153">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -83,8 +79,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assignments/a1_quadratic_function/play.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="146">
+              <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -92,8 +88,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assignments/a1_quadratic_function/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="37" selection-start-line="4" selection-end-line="5" />
+            <state relative-caret-position="119">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -118,8 +114,8 @@
         <option value="$PROJECT_DIR$/assignments/a1_gradient_descent/solution.py" />
         <option value="$PROJECT_DIR$/assignments/a1_quadratic_function/test.py" />
         <option value="$PROJECT_DIR$/assignments/a1_quadratic_function/solution.py" />
-        <option value="$PROJECT_DIR$/assignments/a1_quadratic_function/play.py" />
         <option value="$PROJECT_DIR$/assignments/a1_nonlinear_function/play.py" />
+        <option value="$PROJECT_DIR$/assignments/a1_quadratic_function/play.py" />
         <option value="$PROJECT_DIR$/assignments/a1_nonlinear_function/solution.py" />
       </list>
     </option>
@@ -199,7 +195,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.play (2)">
+  <component name="RunManager" selected="Python tests.pytest in test.py (2)">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="optimization_algorithms_w23" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -260,6 +256,21 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest for test.test_NLP_nonlinear.testJacobian" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="optimization_algorithms_w23" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/assignments/a1_nonlinear_function" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test.test_NLP_nonlinear.testJacobian&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="pytest for test.test_NLP_xCCx" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="optimization_algorithms_w23" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -273,21 +284,6 @@
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test.test_NLP_xCCx&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest in test.py (1)" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="optimization_algorithms_w23" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/assignments/a1_quadratic_function" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/assignments/a1_quadratic_function/test.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="pytest in test.py (2)" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
@@ -308,17 +304,17 @@
     <list>
       <item itemvalue="Python.play (1)" />
       <item itemvalue="Python.play (2)" />
-      <item itemvalue="Python tests.pytest in test.py (1)" />
       <item itemvalue="Python tests.pytest in test.py (2)" />
       <item itemvalue="Python tests.pytest for test.test_NLP_xCCx" />
+      <item itemvalue="Python tests.pytest for test.test_NLP_nonlinear.testJacobian" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.play (2)" />
-        <item itemvalue="Python.play (1)" />
-        <item itemvalue="Python tests.pytest for test.test_NLP_xCCx" />
         <item itemvalue="Python tests.pytest in test.py (2)" />
-        <item itemvalue="Python tests.pytest in test.py (1)" />
+        <item itemvalue="Python tests.pytest for test.test_NLP_nonlinear.testJacobian" />
+        <item itemvalue="Python.play (1)" />
+        <item itemvalue="Python.play (2)" />
+        <item itemvalue="Python tests.pytest for test.test_NLP_xCCx" />
       </list>
     </recent_temporary>
   </component>
@@ -357,6 +353,9 @@
     <history-entry file="pytest_for_test_test_NLP_xCCx - 2023.11.13 at 23h 54m 49s.xml">
       <configuration name="pytest for test.test_NLP_xCCx" configurationId="tests" />
     </history-entry>
+    <history-entry file="pytest_for_test_test_NLP_nonlinear_testJacobian - 2023.11.14 at 00h 18m 05s.xml">
+      <configuration name="pytest for test.test_NLP_nonlinear.testJacobian" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -369,6 +368,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="830" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24966975" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -413,13 +413,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assignments/a1_nonlinear_function/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assignments/a1_gradient_descent/get-pip.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -441,27 +434,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assignments/a1_quadratic_function/solution.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="69" column="9" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assignments/a1_quadratic_function/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="37" selection-start-line="4" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assignments/a1_quadratic_function/play.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assignments/a1_nonlinear_function/play.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -469,10 +441,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assignments/a1_quadratic_function/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignments/a1_quadratic_function/solution.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="69" column="9" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignments/a1_quadratic_function/play.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignments/a1_nonlinear_function/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assignments/a1_nonlinear_function/solution.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+        <state relative-caret-position="134">
+          <caret line="70" column="57" selection-start-line="70" selection-start-column="57" selection-end-line="70" selection-end-column="57" />
         </state>
       </provider>
     </entry>
