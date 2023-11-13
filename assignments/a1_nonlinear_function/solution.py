@@ -37,8 +37,9 @@ class NLP_nonlinear(NLP):
         """
 
         # Add code to compute the feature (cost) and the Jacobian
-        y = (1/np.linalg.norm(self.C@x)^2).reshape((1,))  # € R
-        J = (-self.C.T @ self.C @ x/np.linalg.norm(self.C@x)^3).reshape((1,-1)) # € R^n
+        D = self.C@x
+        y = (1/np.linalg.norm(D)).reshape((1,))  # € R
+        J = (-self.C.T @ self.C @ x/np.linalg.norm(self.C@x)**3).reshape((1,-1)) # € R^n
 
         return y, J
 

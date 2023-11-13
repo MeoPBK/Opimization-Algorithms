@@ -22,7 +22,7 @@ class test_NLP_xCCx(unittest.TestCase):
         C = np.ones((2, 2))
         problem = NLPTimeout(NLP_xCCx(C))
         x = np.ones(2)
-        value = problem.evaluate(x)[0][0]
+        value = problem.evaluate(x)
         solution = 8
 
         self.assertAlmostEqual(value, solution)
@@ -45,7 +45,7 @@ class test_NLP_xCCx(unittest.TestCase):
         H = problem.getFHessian(x)
 
         def f(x):
-            return problem.evaluate(x)[0][0]
+            return problem.evaluate(x)
 
         tol = 1e-4
         Hdiff = finite_diff_hess(f, x, tol)

@@ -15,7 +15,7 @@ C = np.ones((2, 2))
 problem = NLP_nonlinear(C)
 x = np.ones(2)
 y, J = problem.evaluate(x)
-value = y[0]
+value = y
 solution = 1. / np.sqrt(8.)
 
 

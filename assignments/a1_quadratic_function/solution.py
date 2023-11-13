@@ -67,8 +67,8 @@ class NLP_xCCx(NLP):
         """
 
         # Add code to compute the Hessian
-        A = self.C.T @ self.C
-        H = (A + A.T)
+        H = 2*self.C.T @ self.C
+
 
 
         return H
