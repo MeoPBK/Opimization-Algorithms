@@ -19,7 +19,7 @@ class Hole(NLP):
         C: np.array 2d
         a: float
         """
-        assert(C.shape[0] == C.shape[1])
+        assert (C.shape[0] == C.shape[1])
         self.C = C
         self.a = a
         self.n = C.shape[0]
@@ -53,7 +53,7 @@ class Hole(NLP):
         """
         a = self.a
         C = self.C
-        ddf = (-8 * a * a * (C@x)[None].T @ (C@x)
+        ddf = (-8 * a * a * (C @ x)[None].T @ (C @ x)
                [None]) / ((a * a + x @ C @ x) ** 3)
         ddf += 2 * a * a * C / ((a * a + x @ C @ x) ** 2)
         return ddf

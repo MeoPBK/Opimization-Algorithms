@@ -10,7 +10,7 @@ except BaseException:
 
 class HalfCircle(NLP):
     """
-    x = [ x1 , x2 ] , x1, x2 \in \R
+    x = [ x1 , x2 ] , x1, x2 \\in \\R
     f =  [x1+x2]
     sos = []
     eq = []
@@ -79,7 +79,7 @@ class HalfCircle(NLP):
 
 class HalfCircle2(NLP):
     """
-    x = [ x1 , x2 ] , x1, x2 \in \R
+    x = [ x1 , x2 ] , x1, x2 \\in \\R
     f =  [x1+x2]
     sos = []
     eq = [2*x_1+x_2]

@@ -5,7 +5,7 @@
 
 
 # Linear Least Squares
-## Ax = b
+# Ax = b
 
 # Quadratic Function
 ##
@@ -155,7 +155,7 @@ class PointTrajOpt(NLP):
         output: string
         """
         # draw with matplotlib
-        assert(len(x) % 2 == 0)
+        assert (len(x) % 2 == 0)
         n = int(len(x) / 2)
         xs = [x[2 * i] for i in range(n)]
         ys = [x[2 * i + 1] for i in range(n)]

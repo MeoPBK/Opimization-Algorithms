@@ -38,7 +38,7 @@ class MinimumFuel(NLP):
             sos[i] = x[ind]
             Jsos[i, ind] = 1
 
-        h_dyn = self.H_dyn@x
+        h_dyn = self.H_dyn @ x
         Jh_dyn = self.H_dyn
 
         h_des = x[-self.n:] - self.x_des

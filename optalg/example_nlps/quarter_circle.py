@@ -7,7 +7,7 @@ from ..interface.objective_type import OT
 
 class QuaterCircle(NLP):
     """
-    x = [ x1 , x2 ] , x1, x2 \in \R
+    x = [ x1 , x2 ] , x1, x2 \\in \\R
     f =  [x1+x2]
     sos = []
     eq = []
