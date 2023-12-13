@@ -56,7 +56,7 @@ class Cos_lsqs(NLP):
         b = self.b
         r = A @ x - b
         Axb2 = np.dot(r, r)
-        H1 = np.cos(.5 * Axb2) * np.outer(r@A, r@A)
+        H1 = np.cos(.5 * Axb2) * np.outer(r @ A, r @ A)
         H2 = np.sin(.5 * Axb2) * A.T @ A
 
         return H1 + H2 + 2 * self.alpha * np.eye(len(x))

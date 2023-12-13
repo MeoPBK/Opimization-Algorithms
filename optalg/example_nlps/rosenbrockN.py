@@ -25,7 +25,7 @@ class RosenbrockN(NLP):
         MathematicalProgram.evaluate
         """
 
-        assert(len(x) == self.N)
+        assert (len(x) == self.N)
         c = 0
         J = np.zeros(self.N)
         for i in range(0, self.N - 1):
