@@ -83,10 +83,59 @@ def solve(nlp: NLP, Dout={}):
     Dout["x0"] = np.copy(x)
     Dout["xs"].append(np.copy(x))
 
-    #
-    # Write your code here
-    #
+    ## Gradient & Hessian
+    phi, J = nlp.evaluate(x)    # phi[0],J[0]
+    H = nlp.getFHessian(x)
 
+    ## Parameters
+    k = 1           # alpha
+    lb = 1          # lambda
+    rho_ls = 0.01
+    rho_a_plus = 1.2
+    rho_a_min = 0.5
+    rho_lb_plus = 1.2
+    rho_lb_min = 0.5
+    tol = 0.0001
+    delta_max = np.inf
+
+    delta = np.linalg.solve((H + lb * np.identity(len(H))), -J[0])
+
+    while (np.linalg.norm(k*delta,np.inf) >= tol):
+        ## Newton Method
+        delta = np.linalg.solve((H+lb*np.identity(len(H))),-J[0])
+        if J[0].T@delta > 0:
+            delta = -J[0]
+            # lb = max(-np.linalg.eig(H)+0.001
+            # delta = np.linalg.solve((H+lb*np.identity(len(H))),-J[0])
+
+        ## new conditions
+        cond = phi[0] + rho_ls * np.dot(J[0], k*delta)
+
+        x_plus = k*delta + x
+        phi_new, J_new = nlp.evaluate(x_plus)
+
+        ## backtracking line search
+        while phi_new[0] > (cond):
+            k = rho_a_min * k  # minimize k (alpha)
+            lb = rho_lb_plus*lb  # maximize lambda
+
+            delta = -np.linalg.solve((H + lb * np.identity(len(H))), J[0])  # recompute delta
+
+            x_plus = x + k*delta
+            phi_new, J_new = nlp.evaluate(x_plus)
+            cond = phi[0] + rho_ls * np.dot(J[0], k*delta)
+
+        ## reasign variable values
+        phi = phi_new
+        J = J_new
+        x = x_plus
+        H = nlp.getFHessian(x_plus)
+
+        Dout["xs"].append(np.copy(x))
+        #Dout["f"].append(phi)
+        ## riasign k (alpha) and lb (lambda) value
+        k = min(rho_a_plus * k, delta_max)
+        lb = rho_lb_min*lb
 
     # return found solution
     return x
