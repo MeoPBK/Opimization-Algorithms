@@ -63,9 +63,16 @@ class NLP_Gaussina_ineq(NLP):
         NLP.evaluate
         """
 
-        # y =
-        # J =
-        # return y, J
+        n = self.getDimension()
+        m = len(self.b)
+        y = np.empty(1+m)
+        y[0] = -np.exp(-(x-self.x0).T@self.D@(x-self.x0))
+        y[1:] = self.A@x -self.b
+
+        J = np.empty((1+m,n))
+        J[0] = 2*np.exp(-(x-self.x0).T@self.D@(x-self.x0))*self.D@(x-self.x0)
+        J[1:,:] = self.A
+        return y, J
 
 
     def getDimension(self):
@@ -77,8 +84,8 @@ class NLP_Gaussina_ineq(NLP):
         NLP.getDimension
         """
 
-        # n =
-        # return n
+        n = len(self.x0)
+        return n
 
 
     def getFHessian(self, x):
@@ -91,9 +98,10 @@ class NLP_Gaussina_ineq(NLP):
         ------
         NLP.getFHessian
         """
-
-        # H = ...
-        # return H
+        E = np.outer((x-self.x0)@self.D,(x-self.x0)@self.D)
+        #print("E: ",E[:])
+        H = +  2*np.exp(-(x-self.x0).T@self.D@(x-self.x0))*self.D - 4*np.exp(-(x-self.x0).T@self.D@(x-self.x0))*E
+        return H
 
 
     def getInitializationSample(self):
