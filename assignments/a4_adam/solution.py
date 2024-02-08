@@ -46,7 +46,45 @@ def solve(nlp: NLP_stochastic):
     N = nlp.getNumSamples()
 
     #
-    # Write your code Here
+    a = 0.1
+    b1 = 0.9
+    b2 = 0.9
+    s = 0
+    m =np.zeros_like(x)
+    z = m
+    tol = 1e-8
+    theta = tol
+    count = 0
+    chk = False
+
+    i = 0
+    j = 1
+
+    idx =np.arange(0,N)
+
+    while(True):
+        for l in np.random.permutation(idx):
+            s = s+1
+            count += 1
+            phi, J = nlp.evaluate_i(x,l)
+
+            m = m*b1+(1-b1)*J[0]
+            z = z*b2+(1-b2)*np.square(J[0])
+
+            m = m/(1-b1**s)
+            z = z/(1-b2**s)
+
+            x_tmp = x-a*m/(np.sqrt(z)+tol)
+
+            if count > 9999 or np.dot(J[0],J[0])<= tol:
+                i +=1
+                if i>=j or count > 9999:
+                    chk = True
+                    break
+                else:
+                    i =0
+        if chk:
+            break
     #
 
 
