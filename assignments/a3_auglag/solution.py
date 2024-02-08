@@ -96,7 +96,7 @@ def my_func(x, k, lb, mu, nu, nlp, idx, hess = False):
 
     phi, J = nlp.evaluate(x)
     f =phi[idx[0]]
-    r = phi[id[1]]
+    r = phi[idx[1]]
     g =phi[idx[2]]
     h = phi[idx[3]]
     Jf = J[idx[0]]
