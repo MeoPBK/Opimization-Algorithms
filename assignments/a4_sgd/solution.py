@@ -46,7 +46,39 @@ def solve(nlp: NLP_stochastic):
     N = nlp.getNumSamples()
 
     #
-    # Write your code Here
+    tol = 1e-8
+
+    i = 0
+    j = 5
+    k = 0
+    a0 = 1
+    chk = False
+    idx =np.arange(0,N)
+    H = nlp.getFHessian(x).copy()
+    lb, v = np.min(np.linalg.eig(H))
+
+    while True:
+        for s in np.random.permutation(idx):
+            phi, J = nlp.evaluate_i(x,s)
+            i +=1
+            delta = -J[0]/np.dot(J[0],J[0])
+
+            a = a0/(a0*lb*k+1)
+
+            x_tmp = x-a*J[0]
+
+            k +=1
+
+            if i >9999 or max(abs(a*J[0]))<tol:
+                i += 1
+                if i >= j or i >9999:
+                    chk = True
+                    break
+            else:
+                i = 0
+        if chk:
+            break
+        x =x_tmp
     #
 
     return x
