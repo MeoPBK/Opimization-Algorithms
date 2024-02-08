@@ -147,7 +147,7 @@ def solve_unc(x, lb, k, mu, nu, tol, nlp, idx, i):
         phi_tmp, J_tmp, H = my_func(x+a*delta, k, lb, mu, nu, nlp, idx, True)
         while phi_tmp > phi+ls*J[0].T.dot(a*delta):
             a =a_minus*a
-            phi_tmp, J_tmp, H = my_func(x + a * delta, k, lb, mu, nu, nlp, idx, hess: True)
+            phi_tmp, J_tmp, H = my_func(x + a * delta, k, lb, mu, nu, nlp, idx, True)
             i = i+1
         x += a*delta
         a = min(a_plus*a,1)
