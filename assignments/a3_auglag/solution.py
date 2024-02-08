@@ -121,6 +121,8 @@ def my_func(x, k, lb, mu, nu, nlp, idx, hess = False):
         if len(idx[2]) !=0:
             Jg = Jg*np.reshape(act_cn,(len(idx[2]),1))
             tmp = mu*2*(Jg.T@Jg)
+            if (tmp.dtype==np.int64):
+                tmp = tmp.astype(np.float64)
             H+=tmp
         if len(idx[3]) != 0:
             H += nu*2*(Jh.T@Jh)
