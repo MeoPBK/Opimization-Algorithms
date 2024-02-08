@@ -134,7 +134,7 @@ def solve_unc(x, lb, k, mu, nu, tol, nlp, idx, i):
     delta = 1
     a = 1
 
-    phi, J, H = my_func(x, k, lb, mu, nu, nlp, idx, hess: True)
+    phi, J, H = my_func(x, k, lb, mu, nu, nlp, idx, True)
 
     while (np.linalg.norm(delta*a)>tol):
         i +=1
@@ -144,7 +144,7 @@ def solve_unc(x, lb, k, mu, nu, tol, nlp, idx, i):
             if J[0].dot(tmp) <= 0:
                 delta = tmp
         i += 1
-        phi_tmp, J_tmp, H = my_func(x+a*delta, k, lb, mu, nu, nlp, idx, hess: True)
+        phi_tmp, J_tmp, H = my_func(x+a*delta, k, lb, mu, nu, nlp, idx, True)
         while phi_tmp > phi+ls*J[0].T.dot(a*delta):
             a =a_minus*a
             phi_tmp, J_tmp, H = my_func(x + a * delta, k, lb, mu, nu, nlp, idx, hess: True)
