@@ -106,7 +106,7 @@ def my_func(x, k, lb, mu, nu, nlp, idx, hess = False):
 
     cn = np.greater_equal(g,0)
     cn2 = np.greater(lb,0)
-    act_cn = np.logicsl_or(cn, cn2)
+    act_cn = np.logical_or(cn, cn2)
     phi = (np.sum(r**2)+np.inner(g,lb)+mu*np.inner(g**2,act_cn)+np.inner(h,k)+nu*np.sum(h**2)+np.sum(r**2))
     J = (Jf + 2*nu*h@Jh + 2*mu*(g*act_cn)@Jg + (r@Jr*2)+(k@Jh)+(lb@Jg))
     J = J.copy()
