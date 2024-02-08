@@ -139,7 +139,7 @@ def solve_unc(x, lb, k, mu, nu, tol, nlp, idx, i):
     while (np.linalg.norm(delta*a)>tol):
         i +=1
         delta = -J[0]
-        if not np.isclose(np.linalg.det(H), b:0):
+        if not np.isclose(np.linalg.det(H), 0):
             tmp = np.linalg.solve(H,delta)
             if J[0].dot(tmp) <= 0:
                 delta = tmp
