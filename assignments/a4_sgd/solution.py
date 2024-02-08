@@ -54,9 +54,9 @@ def solve(nlp: NLP_stochastic):
     a0 = 1
     chk = False
     idx =np.arange(0,N)
-    H = nlp.getFHessian(x).copy()
-    lb, v = np.min(np.linalg.eig(H))
-
+    #H = nlp.getFHessian(x).copy()
+    #lb, v = np.min(np.linalg.eig(H))
+    lb = 0.1
     while True:
         for s in np.random.permutation(idx):
             phi, J = nlp.evaluate_i(x,s)
