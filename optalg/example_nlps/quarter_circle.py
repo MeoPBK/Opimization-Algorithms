@@ -5,7 +5,7 @@ from ..interface.nlp import NLP
 from ..interface.objective_type import OT
 
 
-class QuaterCircle(NLP):
+class QuarterCircle(NLP):
     """
     x = [ x1 , x2 ] , x1, x2 \\in \\R
     f =  [x1+x2]
