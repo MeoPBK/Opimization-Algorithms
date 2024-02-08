@@ -72,7 +72,7 @@ def solve(nlp: NLP_stochastic):
 
             if i >9999 or max(abs(a*J[0]))<=tol:
                 l += 1
-                if i >= j or i >9999:
+                if l >= j or i >9999:
                     print("i: ", i)
                     chk = True
                     break
