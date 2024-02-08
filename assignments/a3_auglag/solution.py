@@ -69,7 +69,7 @@ def solve(nlp: NLP, Dout={}):
     types = nlp.getFeatureTypes()
 
     #
-    idx = [[1 for i, s in enumerate(types) if s == 0T.f], [1 for i, s in enumerate(types) if s == 0T.r], [1 for i, s in enumerate(types) if s == 0T.ineq],[1 for i, s in enumerate(types) if s == 0T.eq]]
+    idx = [[1 for i, s in enumerate(types) if s == OT.f], [1 for i, s in enumerate(types) if s == OT.r], [1 for i, s in enumerate(types) if s == OT.ineq],[1 for i, s in enumerate(types) if s == OT.eq]]
     lb, k = np.zeros(len(idx[2])), np.zeros(len(idx[3]))
     tol = 0.0005
     mu, nu = 10, 10
