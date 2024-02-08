@@ -71,7 +71,7 @@ def solve(nlp: NLP, Dout={}):
     #
     idx = [[1 for i, s in enumerate(types) if s == OT.f], [1 for i, s in enumerate(types) if s == OT.r], [1 for i, s in enumerate(types) if s == OT.ineq],[1 for i, s in enumerate(types) if s == OT.eq]]
     lb, k = np.zeros(len(idx[2])), np.zeros(len(idx[3]))
-    tol = 0.0005
+    tol = 1e-8
     mu, nu = 10, 10
     dx = 1
 
@@ -114,16 +114,16 @@ def my_func(x, k, lb, mu, nu, nlp, idx, hess = False):
         return phi, J
     else:
         H = nlp.getFHessian(x).copy()
-        if (H.dtype==np.int64):
+        if (H.dtype!=np.float64):
             H = H.astype(np.float64)
         if len(idx[1]) !=0:
             H += 2*(Jr.T@Jr)
         if len(idx[2]) !=0:
             Jg = Jg*np.reshape(act_cn,(len(idx[2]),1))
-            tmp = mu*2*(Jg.T@Jg)
-            if (tmp.dtype==np.int64):
-                tmp = tmp.astype(np.float64)
-            H+=tmp
+            H += mu*2*(Jg.T@Jg)
+            #if (tmp.dtype==np.int64):
+            #    tmp = tmp.astype(np.float64)
+            #H+=tmp
         if len(idx[3]) != 0:
             H += nu*2*(Jh.T@Jh)
         return phi, J, H
