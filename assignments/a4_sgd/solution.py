@@ -51,6 +51,7 @@ def solve(nlp: NLP_stochastic):
     i = 0
     j = 5
     k = 0
+    l = 0
     a0 = 1
     chk = False
     idx =np.arange(0,N)
@@ -69,9 +70,10 @@ def solve(nlp: NLP_stochastic):
 
             k +=1
 
-            if i >9999 or max(abs(a*J[0]))<tol:
-                i += 1
+            if i >9999 or max(abs(a*J[0]))<=tol:
+                l += 1
                 if i >= j or i >9999:
+                    print("i: ", i)
                     chk = True
                     break
             else:
