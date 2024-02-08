@@ -85,6 +85,7 @@ def solve(nlp: NLP_stochastic):
                     i =0
         if chk:
             break
+        x = x_tmp
     #
 
 
