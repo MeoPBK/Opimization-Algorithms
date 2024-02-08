@@ -79,7 +79,7 @@ def solve(nlp: NLP, Dout={}):
     i = 1
     while(dx >= tol or (np.all(phi[idx[2]]>= tol) and len(idx[2])!=0) or (np.all(np.abs(phi[idx[3]]) >= tol) and len(idx[3])!=0)):
         x_tmp = x.copy()
-        x, i = solve_unc(x, lb, k, mu,tol, nlp, idx, i)
+        x, i = solve_unc(x, lb, k, mu, nu, tol, nlp, idx, i)
         phi, J = nlp.evaluate(x)
         i = i+1
         lb += mu*2*phi[idx[2]]
@@ -126,7 +126,7 @@ def my_func(x, k, lb, mu, nu, nlp, idx, hess = False):
             H += nu*2*(Jh.T@Jh)
         return phi, J, H
 
-def solve_unc(x, lb, k, mu,tol, nlp, idx, i):
+def solve_unc(x, lb, k, mu, nu, tol, nlp, idx, i):
     i += 1
     a_plus = 1.2
     a_minus = 0.5
@@ -134,7 +134,7 @@ def solve_unc(x, lb, k, mu,tol, nlp, idx, i):
     delta = 1
     a = 1
 
-    phi, J, H = my_func(x, k, lb, mu, nu, nlp, idx, True)
+    phi, J, H = my_func(x, k, lb, mu, nu, nlp, idx, hess: True)
 
     while (np.linalg.norm(delta*a)>tol):
         i +=1
