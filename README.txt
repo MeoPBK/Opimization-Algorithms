@@ -1,4 +1,4 @@
-# Optimization Algorithms W23
+# Optimization Algorithms
 
 Exercises with different advanced optimization techniques
 
